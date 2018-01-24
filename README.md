@@ -6,7 +6,7 @@ You can read more about it at https://coin.inbest.cloud
 
 ## Building inbestcoin
 
-#### On * nix / OS X
+### On * nix / OS X
 
 Dependencies: GCC 4.7.3 or later, CMake 2.8.6 or later, and Boost 1.59 or later.
 
@@ -60,9 +60,8 @@ cmake.exe -DBOOST_ROOT=C:\boost_1_59_0 -DBOOST_LIBRARYDIR=C:\boost_1_59_0\libs -
 
  ## License
 
- inbestcoin-explorer is licensed under the GNU Lesser General Public License v3.0
+ inbestcoin is licensed under the GNU Lesser General Public License v3.0
 
  ## Credits
 
  With technology from https://github.com/forknote/cryptonote-generator and https://cryptonote.org/
-
