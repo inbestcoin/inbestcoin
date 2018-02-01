@@ -613,10 +613,11 @@ std::error_code Core::addBlock(const CachedBlock& cachedBlock, RawBlock&& rawBlo
       logger(Logging::WARNING) << "Checkpoint block hash mismatch for block " << cachedBlock.getBlockHash();
       return error::BlockValidationError::CHECKPOINT_BLOCK_HASH_MISMATCH;
     }
-  } else if (!currency.checkProofOfWork(cryptoContext, cachedBlock, currentDifficulty)) {
-    logger(Logging::WARNING) << "Proof of work too weak for block " << cachedBlock.getBlockHash();
-    return error::BlockValidationError::PROOF_OF_WORK_TOO_WEAK;
   }
+  //else if (!currency.checkProofOfWork(cryptoContext, cachedBlock, currentDifficulty)) {
+  //  logger(Logging::WARNING) << "Proof of work too weak for block " << cachedBlock.getBlockHash();
+  //  return error::BlockValidationError::PROOF_OF_WORK_TOO_WEAK;
+  //}
 
   auto ret = error::AddBlockErrorCode::ADDED_TO_ALTERNATIVE;
 
@@ -1919,7 +1920,7 @@ BlockDetails Core::getBlockDetails(const Crypto::Hash& blockHash) const {
 
   uint32_t blockIndex = segment->getBlockIndex(blockHash);
   BlockTemplate blockTemplate = restoreBlockTemplate(segment, blockIndex);
-  
+
   BlockDetails blockDetails;
   blockDetails.majorVersion = blockTemplate.majorVersion;
   blockDetails.minorVersion = blockTemplate.minorVersion;
@@ -2071,7 +2072,7 @@ TransactionDetails Core::getTransactionDetails(const Crypto::Hash& transactionHa
   }
   transactionDetails.extra.publicKey = transaction->getTransactionPublicKey();
   transaction->getExtraNonce(transactionDetails.extra.nonce);
-  
+
   transactionDetails.signatures = rawTransaction.signatures;
 
   transactionDetails.inputs.reserve(transaction->getInputCount());
