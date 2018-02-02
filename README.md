@@ -51,17 +51,17 @@ If you are building on an older processor without AVX support, add the following
 And then build from within MSVC. You may find it helpful to explicitly include Boost paths:
 ```
 cmake.exe -DBOOST_ROOT=C:\boost_1_59_0 -DBOOST_LIBRARYDIR=C:\boost_1_59_0\libs -G "Visual Studio 14 Win64" ..
- ```
- ## Community and support
+```
+## Community and support
 
- You can find us at:
+You can find us at:
 
- [Telegram](https://t.me/inbestcoin)
+[Telegram](https://t.me/inbestcoin)
 
- ## License
+## License
 
- inbestcoin is licensed under the GNU Lesser General Public License v3.0
+inbestcoin is licensed under the GNU Lesser General Public License v3.0
 
- ## Credits
+## Credits
 
- With technology from https://github.com/forknote/cryptonote-generator and https://cryptonote.org/
+With technology from https://github.com/forknote/cryptonote-generator and https://cryptonote.org/
