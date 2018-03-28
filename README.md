@@ -56,7 +56,7 @@ cmake.exe -DBOOST_ROOT=C:\boost_1_59_0 -DBOOST_LIBRARYDIR=C:\boost_1_59_0\libs -
 
 You can find us at:
 
-[Telegram](https://t.me/inbestcoin)
+[Slack](https://join.slack.com/t/hackatoncriptomoneda/shared_invite/enQtMzM3Njc2MzUwNjkwLTY4Yjc1NTg4OTFkM2I5MzhlMGRkMGZlYzIwYTk0OGJmYWQ2MzI2NmE4ZDk5NWEwMDY0NWU1MzY3MGI2NTQ2ZDc)
 
 ## License
 
